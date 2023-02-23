@@ -21,6 +21,7 @@
 		<!-- Lib -->
 		<lib-wilson-tenpo.version>1.0.0</lib-wilson-tenpo.version>
 		<!-- Others -->
+		<spring-boot-starter-data-jpa.version>2.1.18.RELEASE</spring-boot-starter-data-jpa.version>
 		<springdoc-openapi-ui.version>1.6.14</springdoc-openapi-ui.version>
 		<lombok.version>1.18.24</lombok.version>
 		<spring-cloud-starter-openfeign.version>3.1.5</spring-cloud-starter-openfeign.version>
@@ -29,6 +30,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${spring-boot-starter-data-jpa.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -61,14 +67,28 @@
 			<version>${jackson-annotations.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.wilson</groupId>
-			<artifactId>lib-wilson-tenpo</artifactId>
-			<version>${lib-wilson-tenpo.version}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 			<version>${spring-cloud-starter-openfeign.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.18.Final</version>
+		</dependency>
+		<!-- Gson-->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
 		</dependency>
 	</dependencies>
 
